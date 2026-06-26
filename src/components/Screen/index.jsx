@@ -68,7 +68,7 @@ export const Screen = () => {
           <form className="relative mb-5">
             <input
               placeholder="What needs to be done?"
-              className={` ${!darkMode ? "w-full pl-5 pr-14 py-4 bg-[#f8fafc] dark:bg-slate-800/40 border border-[#f1f5f9] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium" : "w-full pl-5 pr-14 py-4 bg-[#1c2330] dark:bg-slate-800/40 border border-[#222c3c] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium"}`}
+              className={` ${!darkMode ? "w-full pl-5 pr-14 py-4 bg-[#f8fafc] dark:bg-slate-800/40 border border-[#f1f5f9] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium" : "w-full pl-5 pr-14 py-4 bg-[#1c2330] dark:bg-slate-800/40 border border-[#222c3c] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#f4f4f5] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium"}`}
               type="text"
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}
@@ -104,7 +104,7 @@ export const Screen = () => {
               Completed
             </button>
           </div>
-          <div className="text-center py-6 text-[#94a3b8] text-[14.5px] font-medium tracking-normal">
+          <div className="text-center py-6 text-[#94a3b8] text-[14.5px] foqnt-medium tracking-normal">
             No tasks yet.Add one above!
           </div>
         </div>
