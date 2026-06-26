@@ -68,7 +68,7 @@ export const Screen = () => {
           <form className="relative mb-5">
             <input
               placeholder="What needs to be done?"
-              className="w-full pl-5 pr-14 py-4 bg-[#f8fafc] dark:bg-slate-800/40 border border-[#f1f5f9] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium"
+              className={` ${!darkMode ? "w-full pl-5 pr-14 py-4 bg-[#f8fafc] dark:bg-slate-800/40 border border-[#f1f5f9] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium" : "w-full pl-5 pr-14 py-4 bg-[#1c2330] dark:bg-slate-800/40 border border-[#222c3c] dark:border-slate-700 rounded-[16px] focus:outline-none text-[#1e293b] dark:text-slate-200 placeholder-[#94a3b8] text-[14px] font-medium"}`}
               type="text"
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}
@@ -94,13 +94,13 @@ export const Screen = () => {
             </button>
           </form>
           <div className="flex gap-2.5 mb-14">
-            <button className="px-5 py-2 text-[14px] font-bold rounded-[10px] bg-[#1e2235] text-white">
+            <button className={` ${!darkMode ? "px-5 py-2 text-[14px] font-bold rounded-[10px] bg-[#1e2235] text-white" : "px-5 py-2 text-[14px] font-bold rounded-[10px] bg-[#4f67ff] text-white"}`}>
               All
             </button>
-            <button className="px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#f1f5f9] text-[#475569] hover:bg-[#e2e8f0] transition-colors">
+            <button className={` ${!darkMode ? "px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#f1f5f9] text-[#475569] hover:bg-[#e2e8f0] transition-colors" : "px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#1c2330] text-[#94a3b8] hover:bg-[#2d3748] transition-colors"}`}>
               Active
             </button>
-            <button className="px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#f1f5f9] text-[#475569] hover:bg-[#e2e8f0] transition-colors">
+            <button className={` ${!darkMode ? "px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#f1f5f9] text-[#475569] hover:bg-[#e2e8f0] transition-colors" : "px-5 py-2 text-[14px] font-semibold rounded-[10px] bg-[#1c2330] text-[#94a3b8] hover:bg-[#2d3748] transition-colors"}`}>
               Completed
             </button>
           </div>
