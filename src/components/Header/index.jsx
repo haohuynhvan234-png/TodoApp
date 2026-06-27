@@ -1,11 +1,22 @@
 import React from "react";
 import { useState } from "react";
-export const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+import { useEffect } from "react";
+export const Header = ({addTask}) => {
+  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}, [darkMode]);
   const ontoggleclick = (e) => {
     setDarkMode(!darkMode);
-    };
+  };
   return (
     <div className="flex items-center justify-between mb-6">
       <div className="flex items-center gap-3">
