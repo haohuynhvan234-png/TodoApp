@@ -9,7 +9,7 @@ export const ProgressSection = () => {
     setDarkMode(!darkMode);
   };
   useState(() => {
-  if (Header==darkMode) {
+  if (<Header/>==darkMode) {
     document.documentElement.classList.add("dark");
   } else {
     document.documentElement.classList.remove("dark");
